@@ -1,0 +1,31 @@
+span{
+    background-color: aqua;
+    color: tomato;
+    font-size: 25px;
+}
+.intro-paragraphs {
+    color: red;
+    background-color: pink;
+}
+#main-heading {
+    font-weight: bold;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2, .about-content {
+color: orange;
+text-align: center;
+}
+.article-container, p {
+    font-style: italic;
+    text-decoration: underline;
+
+}
+a:hover {
+    color: blueviolet;
+    font-size: 20px;
+}
+a:active {
+    color: yellowgreen;
+}

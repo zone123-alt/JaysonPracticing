@@ -1,0 +1,22 @@
+#relative {
+    background-color: aqua;
+    position: relative;
+    top: 80px;
+    left: 200px;
+}
+#absolute {
+    background-color: burlywood;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }
+#fixed {
+    background-color: cadetblue;
+    position: fixed;
+    top: 0px;
+}
+#sticky {
+    background-color: darkkhaki;
+    position: sticky;
+    top: 0px;
+}

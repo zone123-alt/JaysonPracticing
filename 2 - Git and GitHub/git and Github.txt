@@ -1,0 +1,38 @@
+# git config --global user.name - configure username
+# git config --global user.email - configure email
+# git config user.name - to check if username is configured successfully
+# git config user.email - to check if email is configured successfully
+# git status - this will show the status of our files and folders
+
+3 STAGES STRUCTURE
+1. Working Area - git init(initialize an empty repository for our current folder)
+2. Staging Area - git add .
+3. Commit Area - git commit -m "This is the description"
+
+# git log
+BRANCH
+# Create a BRANCH
+git branch [branch_name]
+
+# List all branches
+git branch -a
+
+# Switch to a different branch
+git checkout [branch_name]
+git switch [branch_name]
+
+# Merging feature branch to our master/main branch
+git merge
+
+Github
+# Create a remote repository
+New > New Repository > Type in the name of Remote Repository
+
+git remote add origin "HTTPS link that GitHub will automatically create"
+git branch -M main
+git push -u origin main
+
+# Push commits to the remote repository
+git push
+
+git reset HEAD~1 - Reset commit

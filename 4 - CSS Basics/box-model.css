@@ -1,0 +1,37 @@
+.box {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.box2 {
+padding: 20px 40px 60px 80px;
+}
+.box3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+.box4 {
+    margin: 20px 40px 60px 80px;
+}
+.mix-borders {
+    background-color: aqua;
+    border-radius: 50px;
+    border: solid dashed dotted double;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+}
+.circle-container {
+    background-color: aquamarine;
+    border: solid;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    color: orange;
+
+}
