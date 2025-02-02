@@ -1,48 +1,37 @@
-const addExpenseBtn = document.querySelector(".add-expense-btn");
-const expenseList = document.querySelector(".expense-list");
-const totalExpenses = document.querySelector(".total-expense h4");
+const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*()_+<>?/";
 
-let expenses = [];
-let total = 0;
+const lengthE1 = document.getElementById("length");
+const lowercaseE1 = document.getElementById("lowercase");
+const uppercaseE1 = document.getElementById("uppercase");
+const numbersE1 = document.getElementById("numbers");
+const symbolsE1 = document.getElementById("symbols");
+const generateBtn = document.getElementById("generate");
+const passwordE1 = document.getElementById("password");
 
-function renderExpenses() {
-  let html = "";
-  expenses.forEach((expense) => {
-    html += `
-    <div class="expense-item"> 
-    <div class="expense-item-description">${expense.description}</div>
-    <div class="expense-item-amount">Php${expense.amount}</div>
-    <button class="delete-expense-btn">&times;</button>
-    </div>
-    `;
-  });
-  expenseList.innerHTML = html;
-  totalExpenses.innerText = `Total Expense: Php${total}`;
-}
-function addExpense() {
-  const description = prompt("Enter Expense Description");
-  const amount = parseFloat(prompt("Enter Expense Amount"));
-  if (description && amount) {
-    const expense = {
-      description: description,
-      amount: amount,
-    };
-    expenses.push(expense);
-    total += amount;
-    renderExpenses();
+generateBtn.addEventListener("click", function () {
+  const length = lengthE1.value;
+  let characters = "";
+  let password = "";
+
+  if (lowercaseE1.checked) {
+    characters += lowercaseLetters;
   }
-}
-addExpenseBtn.addEventListener("click", addExpense);
-function deleteExpense(index) {
-  total -= expenses[index].amount;
-  expenses.splice(index, 1);
-  renderExpenses();
-}
-expenseList.addEventListener("click", function (event) {
-  if (event.target.classList.contains("delete-expense-btn")) {
-    const index = Array.from(
-      event.target.parentNode.parentNode.children
-    ).indexOf(event.target.parentNode);
-    deleteExpense(index);
+  if (uppercaseE1.checked) {
+    characters += uppercaseLetters;
   }
+  if (numbersE1.checked) {
+    characters += numbers;
+  }
+  if (symbolsE1.checked) {
+    characters += symbols;
+  }
+  for (let i = 0; i < length; i++) {
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  passwordE1.value = password;
 });
